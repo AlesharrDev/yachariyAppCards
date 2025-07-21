@@ -1,0 +1,26 @@
+
+ion-content{
+    
+    .containerbtns{
+        // padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        ion-button{
+            // font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+ion-modal {
+  --height: auto;
+}
+.block {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

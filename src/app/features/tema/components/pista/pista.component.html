@@ -1,0 +1,8 @@
+<ion-modal trigger="open-modal" [initialBreakpoint]="0.4" [breakpoints]="[0, 0.4, 0.8, 1]">
+    <ng-template>
+        <div class="block">
+            <!-- Aquí puedes mostrar la descripción, pero necesitas recibirla como input -->
+            <ng-content>{{description}}</ng-content>
+        </div>
+    </ng-template>
+</ion-modal>

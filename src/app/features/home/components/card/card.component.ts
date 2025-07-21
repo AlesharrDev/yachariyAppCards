@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   IonCard,
   IonCardHeader,
@@ -12,11 +12,11 @@ import {
   styleUrls: ['./card.component.scss'],
   imports: [IonCardTitle, IonCardHeader, IonCard],
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() title: string = 'Título de la tarjeta';
   @Input() temaid: string = '';
+  @Input() temaimage?: string = '';
   constructor(private router: Router) {}
-  ngOnInit() {}
 
   goToTema() {
     this.router.navigate(['/tema', this.temaid]);

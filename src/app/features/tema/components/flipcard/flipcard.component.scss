@@ -45,9 +45,10 @@
 }
 
 .flip-card-back {
-  background-color: var(--ion-color-primary); /* Color de fondo del reverso */
+  background-color: rgb(24, 127, 196); /* Color de fondo del reverso */
   color: var(--ion-color-light); /* Color del texto del reverso */
   transform: rotateY(180deg); /* Inicialmente el reverso está girado para quedar oculto */
+  
 }
 
 .flip-card-content {
@@ -71,3 +72,7 @@ ion-card-title {
 ion-card-content p {
   font-size: 1.2em; /* Tamaño de fuente para el subtítulo */
 }
+// modo oscuro
+// .flip-card-container.dark-mode {
+//   background-color: var(--ion-color-dark); /* Fondo oscuro para el contenedor */
+// }

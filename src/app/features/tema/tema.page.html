@@ -3,13 +3,38 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>tema</ion-title>
+    <ion-title>{{temaTitulo}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-flipcard></app-flipcard>
-  <app-flipcard></app-flipcard>
-  <app-flipcard></app-flipcard>
 
+
+  <ion-fab horizontal="end" vertical="top" slot="fixed">
+    <ion-fab-button id="open-modal">
+      <ion-icon name="sparkles-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ng-container *ngIf="cards.length > 0">
+    <app-flipcard [card]="currentCard"></app-flipcard>
+
+    <div class="containerbtns">
+      <ion-button (click)="prevCard()" [disabled]="currentIndex === 0"
+        >Volver</ion-button
+      >
+      <ion-button
+        (click)="nextCard()"
+        [disabled]="currentIndex === cards.length - 1"
+        >Siguiente</ion-button
+      >
+    </div>
+    <app-pista [card]="currentCard"></app-pista>
+    <!-- <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0,1]">
+      <ng-template>
+        <div class="block">{{'hola'}}</div>
+      </ng-template>
+    </ion-modal> -->
+
+  </ng-container>
 </ion-content>

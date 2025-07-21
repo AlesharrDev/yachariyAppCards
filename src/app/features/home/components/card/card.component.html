@@ -1,11 +1,6 @@
 <ion-card class="card" (click)="goToTema()">
- <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+ <img [alt]="title" [src]="temaimage" />
   <ion-card-header>
     <ion-card-title>{{this.title}}</ion-card-title>
-    <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
   </ion-card-header>
-
-  <!-- <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
-  </ion-card-content> -->
 </ion-card>
