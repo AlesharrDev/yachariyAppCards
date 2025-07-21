@@ -14,10 +14,11 @@ import {
 })
 export class CardComponent implements OnInit {
   @Input() title: string = 'Título de la tarjeta';
+  @Input() temaid: string = '';
   constructor(private router: Router) {}
   ngOnInit() {}
 
   goToTema() {
-    this.router.navigate(['/tema']);
+    this.router.navigate(['/tema', this.temaid]);
   }
 }
