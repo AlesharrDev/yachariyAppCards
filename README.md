@@ -1,0 +1,8 @@
+
+``
+npm install 
+``
+
+``
+ionic serve
+``
